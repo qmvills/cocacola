@@ -19,10 +19,10 @@
             <img src="../images/white logo.png" alt="Italian Trulli">
           </div>
           <div class = "nav-menu">
-            <a href="cashier.html"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
-            <a href="c-pos.html"class="active"><img src="../images/monitor (1).svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POS</a>
-            <a href="c-inventory.html"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
-            <a href="c-sales.html"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales Report</a>
+            <a href="admin.php"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+            <a href="add.php"><img src="../images/plus-square.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Product</a>
+            <a href="inventory.php"class="active"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
+            <a href="sales.php"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales</a>
           </div>
           <div class="nav-bg">
             <img src="../images/background1.png" alt="Italian Trulli">
@@ -31,12 +31,12 @@
   
         <div class = "nav-top">
         <span style="margin-left: 20px;font-size:50px;cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
-        <a href="../index.html" class="logout">Logout as Cashier</a>
+        <a href="../index.php" class="logout">Logout as Admin</a>
         </div>
   
         <hr class="hr1">
         <div id="dashboard">
-          <h1>POS</h1>
+          <h1>Inventory</h1>
             <div class = "search">
               <form action="search.php" method="GET">
                 <input type="text" name="query" placeholder=" ">
@@ -50,7 +50,7 @@
           <input type="date" id="selectedDate" onchange="displaySelectedDate()">
         </div>   
           
-    <div class = "pos-table">
+    <div class = "inventory-table">
     <table>
       <div class = "inventory-outer">
         <tr>
@@ -59,7 +59,7 @@
             <th>Label</th>
             <th>Quantity</th>
             <th>Price</th>
-            <th>Amount</th>
+            <th>Actions</th>
         </tr>
         </div>
         <div class = "inventory-inner">
@@ -67,119 +67,86 @@
           <td>LQ0001</td>
           <td>Coke</td>
           <td>Litro</td>
-          <td><input type="number" class="qty-input" onchange="calculateAmount(this)"></td>
-          <td class="price">354</td>
-          <td class="amount">0</td>
+          <td>1000</td>
+          <td>354</td>
+          <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </td>
         </tr>
         <tr>
         <td>LQ0002</td>
         <td>Royal</td>
         <td>Litro</td>
-        <td><input type="number" class="qty-input" onchange="calculateAmount(this)"></td>
-        <td class="price">354</td>
-        <td class="amount">0</td>
+        <td>1000</td>
+        <td>354</td>
+        <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </td>
       </tr>
       <tr>
         <td>LQ0003</td>
         <td>Sprite</td>
         <td>Litro</td>
-        <td><input type="number" class="qty-input" onchange="calculateAmount(this)"></td>
-        <td class="price">354</td>
-        <td class="amount">0</td>
+        <td>1000</td>
+        <td>354</td>
+        <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </td>
       </tr>
       <tr>
         <td>LQ0004</td>
         <td>Coke</td>
         <td>8oz</td>
-        <td><input type="number" class="qty-input" onchange="calculateAmount(this)"></td>
-        <td class="price">144</td>
-        <td class="amount">0</td>
+        <td>1500</td>
+        <td>144</td>
+        <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </td>
       </tr>
       <tr>
         <td>LQ0005</td>
         <td>Royal</td>
         <td>8oz</td>
-        <td><input type="number" class="qty-input" onchange="calculateAmount(this)"></td>
-        <td class="price">144</td>
-        <td class="amount">0</td>
+        <td>1500</td>
+        <td>144</td>
+        <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </td>
       </tr>
       <tr>
         <td>LQ0006</td>
         <td>Sprite</td>
         <td>8oz</td>
-        <td><input type="number" class="qty-input" onchange="calculateAmount(this)"></td>
-        <td class="price">144</td>
-        <td class="amount">0</td>
+        <td>1500</td>
+        <td>144</td>
+        <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </td>
       </tr>
     </div>
     </table>
-    <div class = "c-recibo">
-        <table>
-            <tr>
-                <th>Total</th>
-                <td class="total">0</td>
-            </tr>
-            <tr>
-                <th>Deposit</th>
-                <td><input type="number" class="deposit" oninput="calculateAmountPaid()"></td>
-            </tr>
-            <tr>
-                <th>Discount</th>
-                <td><input type="number" class="discount" oninput="calculateAmountPaid()"></td>
-            </tr>
-            <tr>
-                <th>Amount Paid</th>
-                <td class="amountpaid">0</td>
-            </tr>
-        </table>
-        <div class="payment">
-            <button>PAY</button>
-          </div>
-  </div>
   </div>
 </body>
 </html>
-
+<div class="credited">
+  <h1>Partner Management System</h1>
+  <p>Designed for Educational Purposes Only</p>
+</div>
 <script >
-
   //SIDE-NAV
-  function openNav() {
+          function openNav() {
             document.getElementById("mySidenav").style.width = "400px";
-        }
-        
-        function closeNav() {
+          }
+          
+          function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-        }
-
-        function calculateAmount(input) {
-            var quantity = input.value;
-            var price = input.parentElement.nextElementSibling.innerText;
-            var amount = parseFloat(quantity) * parseFloat(price);
-            input.parentElement.nextElementSibling.nextElementSibling.innerText = amount.toFixed(2);
-
-            // Calculate and update total amount
-            updateTotal();
-        }
-
-        function updateTotal() {
-            var total = 0;
-            var amounts = document.querySelectorAll('.amount');
-            amounts.forEach(function(amount) {
-                total += parseFloat(amount.innerText);
-            });
-            document.querySelector('.total').innerText = total.toFixed(2);
-
-            // Calculate and update amount paid
-            calculateAmountPaid();
-        }
-
-        function calculateAmountPaid() {
-            var total = parseFloat(document.querySelector('.total').innerText);
-            var deposit = parseFloat(document.querySelector('.deposit').value) || 0;
-            var discount = parseFloat(document.querySelector('.discount').value) || 0;
-            var amountPaid = total + deposit - discount;
-            document.querySelector('.amountpaid').innerText = amountPaid.toFixed(2);
-        }
+          }
                   // Get the current URL
         var currentUrl = window.location.href;
 
@@ -217,6 +184,7 @@ links.forEach(function(link) {
         }
            
       });
+      
       window.onload = openNav;
       
           </script>

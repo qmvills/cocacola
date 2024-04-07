@@ -22,10 +22,10 @@
                 <label>Password</label>
                 <input class= "login" type="password" name = "password" required></br>
                 <div class="loginbtn">
-                <a href="./cashier/cashier.html">Login</a>
+                <a href="./cashier/cashier.php">Login</a>
                 </div>
                 <div class="adminbtn">
-                <a href="./admin/admin.html">Login as Admin</a>
+                <a href="./admin/admin.php">Login as Admin</a>
                 </div>
             </form>
     </div>

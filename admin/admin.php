@@ -17,10 +17,10 @@
           <img src="../images/white logo.png" alt="coca-cola">
         </div>
         <div class = "nav-menu">
-          <a href="cashier.html"class="active"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
-          <a href="c-pos.html"><img src="../images/monitor (1).svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POS</a>
-          <a href="c-inventory.html"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
-          <a href="c-sales.html"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales Report</a>
+          <a href="admin.php"class="active"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+          <a href="add.php"><img src="../images/plus-square.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Product</a>
+          <a href="inventory.php"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
+          <a href="sales.php"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales</a>
         </div>
         <div class="nav-bg">
           <img src="../images/background1.png" alt="Italian Trulli">
@@ -29,7 +29,7 @@
 
       <div class = "nav-top">
       <span style="margin-left: 20px;font-size:50px;cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
-      <a href="../index.html" class="logout">Logout as Cashier</a>
+      <a href="../index.php" class="logout">Logout as Admin</a>
       </div>
       
       <hr class="hr1">
@@ -44,10 +44,10 @@
       </div>
       <hr class="hr2"> 
       <div class="dash-btn">
-        <a href="c-pos.html"><h1>POS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/monitor (2).svg"></h1></a>
-        <a href="c-inventory.html"><h1>Inventory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shopping-bag2.svg"></h1></a>
-        <a href="c-sales.html"><h1> Sales Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/database2.svg"></h1></a>
-        <a href="today.html"><h1>Today's Transaction<img src="../images/truck.svg"></h1></a>
+        <a href="add.php"><h1>Add Product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/plus-circle2.svg"></h1></a>
+        <a href="inventory.php"><h1>Inventory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shopping-bag2.svg"></h1></a>
+        <a href="sales.php"><h1>Sales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/database2.svg"></h1></a>
+        <a href="today.php"><h1>Today's Transaction<img src="../images/truck.svg"></h1></a>
       </div>
       <div class="credited">
         <h1>Partner Management System</h1>

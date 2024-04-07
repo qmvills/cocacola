@@ -17,10 +17,10 @@
           <img src="../images/white logo.png" alt="Italian Trulli">
         </div>
         <div class = "nav-menu">
-          <a href="admin.html"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
-          <a href="add.html"class="active"><img src="../images/plus-square.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Product</a>
-          <a href="inventory.html"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
-          <a href="sales.html"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales</a>
+          <a href="admin.php"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+          <a href="add.php"class="active"><img src="../images/plus-square.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Product</a>
+          <a href="inventory.php"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
+          <a href="sales.php"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales</a>
         </div>
         <div class="nav-bg">
           <img src="../images/background1.png" alt="Italian Trulli">
@@ -29,7 +29,7 @@
 
       <div class = "nav-top">
       <span style="margin-left: 20px;font-size:50px;cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
-      <a href="../index.html" class="logout">Logout as Admin</a>
+      <a href="../index.php" class="logout">Logout as Admin</a>
       </div>
 
       <hr class="hr1">

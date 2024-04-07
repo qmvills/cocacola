@@ -17,10 +17,10 @@
             <img src="../images/white logo.png" alt="Italian Trulli">
           </div>
           <div class = "nav-menu">
-            <a href="admin.html"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
-            <a href="add.html"><img src="../images/plus-square.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Product</a>
-            <a href="inventory.html"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
-            <a href="sales.html"class="active"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales</a>
+            <a href="cashier.php"><img src="../images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+            <a href="c-pos.php"><img src="../images/monitor (1).svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POS</a>
+            <a href="c-inventory.php"><img src="../images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
+            <a href="c-sales.php"class="active"><img src="../images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales Report</a>
           </div>
           <div class="nav-bg">
             <img src="../images/background1.png" alt="Italian Trulli">
@@ -29,12 +29,12 @@
   
         <div class = "nav-top">
         <span style="margin-left: 20px;font-size:50px;cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
-        <a href="../index.html" class="logout">Logout as Admin</a>
+        <a href="../index.php" class="logout">Logout as Cashier</a>
         </div>
   
         <hr class="hr1">
         <div id="dashboard">
-          <h1>Sales</h1>
+          <h1>Sales Report</h1>
             <div class = "search">
               <form action="search.php" method="GET">
                 <input type="text" name="query" placeholder=" ">

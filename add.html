@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="./css/admin.css">
+</head>
+<body>
+  <div class ="body-bg">
+      <img src="images/bg.jpg" alt="Italian Trulli">
+  </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class ="nav-logo">
+          <img src="images/white logo.png" alt="Italian Trulli">
+        </div>
+        <div class = "nav-menu">
+          <a href="admin.html"><img src="images/home (1).svg" alt="Italian Trulli"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+          <a href="add.html"><img src="images/plus-square.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Product</a>
+          <a href="#"><img src="images/shopping-bag.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inventory</a>
+          <a href="#"><img src="images/database.svg" alt="Italian Trulli">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales</a>
+        </div>
+        <div class="nav-bg">
+          <img src="images/background1.png" alt="Italian Trulli">
+        </div>
+      </div>
+
+      <div class = "nav-top">
+      <span style="margin-left: 20px;font-size:50px;cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
+      </div>
+
+      <hr class="hr1">
+      <div id="dashboard">
+        <h1>Admin Dashboard</h1>
+          <div class = "search">
+            <form action="search.php" method="GET">
+              <input type="text" name="query" placeholder=" ">
+              <button type="submit">Search</button>
+            </form>
+          </div>
+      </div>
+
+
+      <div id ="addproduct">
+      <form method="POST" action="process_product.php">
+          <input type="text" id="product_code" name="product_code" placeholder="Product Code: "required><br><br>
+          <input type="text" id="product_name" name="product_name" placeholder="Product Name: "required><br><br>
+          <input type="text" id="label" name="label" placeholder="Label: "required><br><br>
+          <input type="number" id="price" name="price" min="0" step="0.01" placeholder="Price: "required><br><br>
+          <input type="number" id="qty" name="qty" min="0" placeholder="Qty: "required><br><br>
+          <input type="submit" value="Add Product">
+      </form>
+    </div>
+
+
+      <script >
+        //SIDE-NAV
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "400px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                }
+                document.addEventListener("DOMContentLoaded", function() {
+                const searchInput = document.querySelector('.search input');
+        //SEARCH
+                // Add event listeners for focus and blur
+                searchInput.addEventListener('focus', function() {
+                    // When input field is focused, add class to hide background image
+                    this.classList.add('hidden-background');
+                });
+        
+                searchInput.addEventListener('blur', function() {
+                    // When input field loses focus, remove class to show background image
+                    if (!this.value.trim()) { // Check if input field is empty
+                        this.classList.remove('hidden-background');
+                    }
+                });
+            });
+
+          //ADD PRODUCT
+          const inputs = document.querySelectorAll('input[type="text"], input[type="number"]');
+
+// Add event listeners for input events
+inputs.forEach(input => {
+    input.addEventListener('input', function() {
+        // Check if input value is empty
+        if (this.value !== '') {
+            this.setAttribute('data-placeholder', this.getAttribute('placeholder'));
+            this.removeAttribute('placeholder');
+        } else {
+            this.setAttribute('placeholder', this.getAttribute('data-placeholder'));
+        }
+    });
+});
+                </script>
